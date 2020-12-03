@@ -1,6 +1,7 @@
 package john.controllers;
 
-import org.springframework.beans.factory.annotation.Value;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
 
 import john.service.HelloWorldService;
 
@@ -9,17 +10,10 @@ public class GreetingController {
 	
 //	@Autowired
 	private HelloWorldService helloService;	
-	
-
-//	@Value("${app.name}")
-//	private String appName;
 
 	public String greet() {		
 		String greeting = helloService.getGreeting();
 		System.out.println(greeting);
-		
-		
-		
 		return greeting;		
 	}
 
