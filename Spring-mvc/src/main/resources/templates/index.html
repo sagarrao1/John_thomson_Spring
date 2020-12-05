@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head lang="en">
+<meta charset="ISO-8859-1">
+<title>Spring course online tutorial</title>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+
+<link
+	href="http://cdn.jsdelivr.net/webjars/bootstrap/3.3.4/css/bootstrap.min.css"
+	th:href="@{/webjars/bootstrap/3.3.5/css/bootstrap.min.css}"
+	rel="stylesheet" media="screen" />
+
+<script src="http://cdn.jsdelivr.net/webjars/jquery/2.1.4/jquery.min.js"
+	th:src="@{/webjars/jquery/2.1.4/jquery.min.js}"></script>
+
+<link href="../static/css/spring-core.css"
+	th:href="@{css/spring-core.css}" rel="stylesheet" media="screen" />
+
+</head>
+<body>
+	<div class="container">
+		<h1>Hello World</h1>
+		<h4>Go to below category of your choice</h4>
+		<br><br>
+		
+		<div class="row">
+			<div class="col-sm-3">
+				<a href="/customers">Customers</a>
+			</div>
+		</div>
+		
+		<div class="row">
+			<div class="col-sm-3">
+				<a href="/products">Products</a>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
