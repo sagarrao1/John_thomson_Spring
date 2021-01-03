@@ -8,11 +8,13 @@ import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
+import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.domain.Product;
 
 @Service
+@Profile("map")
 public class ProductServiceImpl implements ProductService {
 
 	private Map<Integer, Product> products;	
