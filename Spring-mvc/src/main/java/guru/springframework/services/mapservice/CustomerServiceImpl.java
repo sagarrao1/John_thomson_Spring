@@ -1,16 +1,13 @@
-package guru.springframework.services;
+package guru.springframework.services.mapservice;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.domain.Customer;
 import guru.springframework.domain.DomainObject;
+import guru.springframework.services.CustomerService;
 
 @Service
 @Profile("map")

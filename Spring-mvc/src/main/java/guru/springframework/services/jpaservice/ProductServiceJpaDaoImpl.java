@@ -1,17 +1,16 @@
-package guru.springframework.services;
+package guru.springframework.services.jpaservice;
 
 import java.util.List;
 
 import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
 import javax.persistence.PersistenceContext;
-import javax.persistence.PersistenceUnit;
 import javax.transaction.Transactional;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Repository;
 
 import guru.springframework.domain.Product;
+import guru.springframework.services.ProductService;
 
 @Repository
 @Profile("jpa")

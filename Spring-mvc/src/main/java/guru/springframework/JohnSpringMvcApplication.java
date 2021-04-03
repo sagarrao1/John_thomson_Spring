@@ -1,12 +1,8 @@
 package guru.springframework;
 
-import java.util.Arrays;
-import java.util.List;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.context.ApplicationContext;
-import org.springframework.context.ConfigurableApplicationContext;
 
 @SpringBootApplication
 public class JohnSpringMvcApplication {
@@ -15,7 +11,7 @@ public class JohnSpringMvcApplication {
 		ApplicationContext ctx = SpringApplication.run(JohnSpringMvcApplication.class, args);
 		
 //		System.out.println("Beans ******************");
-//		System.out.println("Bean count:"+ ctx.getBeanDefinitionCount());
+		System.out.println("Bean count:"+ ctx.getBeanDefinitionCount());
 //		
 //		for (String name : ctx.getBeanDefinitionNames()) {
 //			System.out.println(name);

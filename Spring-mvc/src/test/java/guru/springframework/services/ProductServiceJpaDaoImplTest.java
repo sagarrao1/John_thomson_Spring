@@ -26,7 +26,7 @@ public class ProductServiceJpaDaoImplTest {
 	public void testListMethod() {
 		List<Product> allProducts = service.listAllProducts();
 		
-		assertEquals(3, allProducts.size());
+		assertEquals(2, allProducts.size());
 //		assert allProducts.size()==2;
 		
 	}

@@ -1,4 +1,4 @@
-package guru.springframework.services;
+package guru.springframework.services.mapservice;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -6,12 +6,12 @@ import java.util.Collections;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import java.util.Set;
 
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import guru.springframework.domain.Product;
+import guru.springframework.services.ProductService;
 
 @Service
 @Profile("map")

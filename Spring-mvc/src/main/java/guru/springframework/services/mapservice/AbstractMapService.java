@@ -1,4 +1,4 @@
-package guru.springframework.services;
+package guru.springframework.services.mapservice;
 
 import java.util.ArrayList;
 import java.util.Collections;

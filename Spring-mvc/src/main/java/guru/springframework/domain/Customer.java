@@ -1,96 +1,77 @@
 package guru.springframework.domain;
 
+import javax.persistence.CascadeType;
+import javax.persistence.Embedded;
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Version;
+import javax.persistence.OneToOne;
 
 @Entity
-public class Customer implements DomainObject {
-	
-	@Id
-	@GeneratedValue
-	private Integer id;
-	
-	@Version
-	private Integer version;
-	
+public class Customer extends AbstractDomainClass {
+
 	private String name;
 	private String email;
 	private String phone;
-	private String address1;
-	private String city;
-	private String state;
-	
-	
-	
-	public Integer getVersion() {
-		return version;
-	}
 
+	@Embedded
+	private Address billingAddress;
 
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+	@Embedded
+	private Address shippingAddress;
 
+	@OneToOne(cascade = CascadeType.ALL)
+	private User user;
+	
 
 	public Customer() {
 		super();
 	}
 
-
-	public Integer getId() {
-		return id;
-	}
-	
-	
-	public void setId(Integer id) {
-		this.id = id;
-	}
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getEmail() {
 		return email;
 	}
+
 	public void setEmail(String email) {
 		this.email = email;
 	}
+
 	public String getPhone() {
 		return phone;
 	}
+
 	public void setPhone(String phone) {
 		this.phone = phone;
 	}
-	public String getAddress1() {
-		return address1;
+
+	public User getUser() {
+		return user;
 	}
-	public void setAddress1(String address1) {
-		this.address1 = address1;
+
+	public void setUser(User user) {
+		this.user = user;
 	}
-	public String getCity() {
-		return city;
+
+	public Address getBillingAddress() {
+		return billingAddress;
 	}
-	public void setCity(String city) {
-		this.city = city;
+
+	public void setBillingAddress(Address billingAddress) {
+		this.billingAddress = billingAddress;
 	}
-	public String getState() {
-		return state;
+
+	public Address getShippingAddress() {
+		return shippingAddress;
 	}
-	public void setState(String state) {
-		this.state = state;
+
+	public void setShippingAddress(Address shippingAddress) {
+		this.shippingAddress = shippingAddress;
 	}
-	
-	
-	@Override
-	public String toString() {
-		return "Customer [id=" + id + ", name=" + name + ", email=" + email + ", phone=" + phone + ", address1="
-				+ address1 + ", city=" + city + ", state=" + state + "]";
-	}
-	
-	
 	
 }

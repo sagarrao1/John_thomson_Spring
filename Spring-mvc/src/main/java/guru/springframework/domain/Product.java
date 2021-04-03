@@ -3,35 +3,18 @@ package guru.springframework.domain;
 import java.math.BigDecimal;
 
 import javax.persistence.Entity;
-import javax.persistence.GeneratedValue;
-import javax.persistence.GenerationType;
-import javax.persistence.Id;
-import javax.persistence.Version;
 
 @Entity
-public class Product {
-	
-	@Id
-	@GeneratedValue(strategy = GenerationType.AUTO)
-	private Integer id;
-	
-	@Version
-	private Integer version;
+public class Product extends AbstractDomainClass{
 	
 	private String description;
 	private BigDecimal price;
 	private String imageUrl;
 	
-	
 	public Product() {
 		super();
 	}
-	public Integer getId() {
-		return id;
-	}
-	public void setId(Integer id) {
-		this.id = id;
-	}
+
 	public String getDescription() {
 		return description;
 	}
@@ -51,15 +34,11 @@ public class Product {
 		this.imageUrl = imageUrl;
 	}
 		
-	public Integer getVersion() {
-		return version;
-	}
-	public void setVersion(Integer version) {
-		this.version = version;
-	}
+	
+	
 	@Override
 	public String toString() {
-		return "Product [id=" + id + ", description=" + description + ", price=" + price + ", imageUrl=" + imageUrl
+		return "Product [id=" + super.getId() + ", description=" + description + ", price=" + price + ", imageUrl=" + imageUrl
 				+ "]";
 	}
 	
