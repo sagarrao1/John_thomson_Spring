@@ -26,6 +26,11 @@ public class Speaker {
 		this.lastName = lastName;
 	}
 
+	@Override
+	public String toString() {
+		return "Speaker [firstName=" + firstName + ", lastName=" + lastName + "]";
+	}
+
 	
 	
 }
